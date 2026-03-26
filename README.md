@@ -3,7 +3,7 @@
 Welcome to my professional portfolio repository. I build scalable, web-based systems at the intersection of software engineering and data-driven insight. This project showcases my journey from a BSIT student to an architect of digital tools that solve real-world problems.
 
 ## 🌐 Live Demo
-**[View My Live Portfolio ↗](https://shainajaneee.github.io/)** 
+**[View My Live Portfolio ↗](https://shainajane-portfolio-v2.vercel.app/)** 
 
 ---
 
