@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shaina Jane Tanguan — Web Developer & Data Analyst</title>
+  <meta name="description" content="Web Developer & Data Analyst based in Philippines."/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="ring"></div>
+<div id="prog"></div>
+<div id="toast"></div>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">SJ<span>.</span>Dev</a>
+  <div class="nav-right">
+    <a href="#about"    class="nav-link">About</a>
+    <a href="#projects" class="nav-link">Work</a>
+    <a href="#stack"    class="nav-link">Stack</a>
+    <a href="#journey"  class="nav-link">Journey</a>
+    <a href="#recs"     class="nav-link">Reviews</a>
+    <a href="#contact"  class="nav-link">Contact</a>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span id="themeIcon">☀️</span>
+    </button>
+    <a href="mailto:shaynatangguan8@gmail.com" class="nav-cta">Hire Me ↗</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="about">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Available for Opportunities
+    </div>
+    <h1 class="hero-name hero-name-small">
+      Shaina Jane<br>
+      <span class="hero-name-gradient">Tanguan</span>
+    </h1>
+
+    <p class="hero-role" style="min-height: 1.5em;">
+  <span class="typewriter-text">Aspiring Web Developer & Data Analyst</span>
+</p>
+    <p class="hero-bio">
+      I build web-based systems at the intersection of software engineering and data-driven insight — scalable architecture and clean code that turns complex problems into intuitive, reliable digital tools.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-solid">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        View My Work
+      </a>
+      <a href="mailto:shaynatangguan8@gmail.com" class="btn btn-outline">✉ Say Hello</a>
+      <a href="https://github.com/shainajaneee" target="_blank" class="btn btn-outline">GitHub ↗</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="photo-frame">
+      <div class="photo-inner">
+        <img src="pictures/myphoto.jpg" alt="Shaina Jane Tanguan"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span style="display:none">👩‍💻</span>
+      </div>
+      <div class="photo-location">📍 Philippines</div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num" data-count="6">0</div>
+        <div class="stat-lbl">Projects</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" data-count="3">0</div>
+        <div class="stat-lbl">Yrs Coding</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" data-count="16">0</div>
+        <div class="stat-lbl">Tech Skills</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ═══ FEATURED PROJECTS ═══ -->
+<div class="section-divider"></div>
+<section class="section section-bg2" id="projects">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-tag">Portfolio</p>
+      <h2 class="section-title">Featured Work</h2>
+      <div class="section-line"></div>
+    </div>
+    <a href="projects.html" class="btn btn-outline btn-sm">View All Projects ↗</a>
+  </div>
+  <div class="projects-grid" id="featuredGrid"></div>
+  <div class="view-all-wrap reveal">
+    <a href="projects.html" class="btn btn-outline">View All Projects →</a>
+  </div>
+</section>
+
+<!-- ═══ TECH STACK ═══ -->
+<div class="section-divider"></div>
+<section class="section section-bg3 stack-section" id="stack">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-tag">Capabilities</p>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="section-line"></div>
+    </div>
+  </div>
+
+  <div class="stack-row reveal">
+    <div class="stack-row-label">Frontend</div>
+    <div class="marquee-outer">
+      <div class="marquee-track left">
+        <span class="tech-chip">HTML5</span>
+        <span class="tech-chip">CSS3</span>
+        <span class="tech-chip">JavaScript</span>
+        <span class="tech-chip">Tailwind CSS</span>
+        <span class="tech-chip">Bootstrap</span>
+        <span class="tech-chip">Alpine JS</span>
+        <span class="tech-chip">Responsive Design</span>
+        <span class="tech-chip">HTML5</span>
+        <span class="tech-chip">CSS3</span>
+        <span class="tech-chip">JavaScript</span>
+        <span class="tech-chip">Tailwind CSS</span>
+        <span class="tech-chip">Bootstrap</span>
+        <span class="tech-chip">Alpine JS</span>
+        <span class="tech-chip">Responsive Design</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stack-row reveal reveal-d1">
+    <div class="stack-row-label">Backend</div>
+    <div class="marquee-outer">
+      <div class="marquee-track right">
+        <span class="tech-chip">PHP</span>
+        <span class="tech-chip">Laravel</span>
+        <span class="tech-chip">PHP OOP</span>
+        <span class="tech-chip">PHPMailer</span>
+        <span class="tech-chip">MySQL</span>
+        <span class="tech-chip">PostgreSQL</span>
+        <span class="tech-chip">REST APIs</span>
+        <span class="tech-chip">PHP</span>
+        <span class="tech-chip">Laravel</span>
+        <span class="tech-chip">PHP OOP</span>
+        <span class="tech-chip">PHPMailer</span>
+        <span class="tech-chip">MySQL</span>
+        <span class="tech-chip">PostgreSQL</span>
+        <span class="tech-chip">REST APIs</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stack-row reveal reveal-d2">
+    <div class="stack-row-label">Data &amp; Tools</div>
+    <div class="marquee-outer">
+      <div class="marquee-track left2">
+        <span class="tech-chip">Python</span>
+        <span class="tech-chip">Pandas</span>
+        <span class="tech-chip">Matplotlib</span>
+        <span class="tech-chip">Excel</span>
+        <span class="tech-chip">Power BI</span>
+        <span class="tech-chip">Git / GitHub</span>
+        <span class="tech-chip">Google Analytics</span>
+        <span class="tech-chip">Python</span>
+        <span class="tech-chip">Pandas</span>
+        <span class="tech-chip">Matplotlib</span>
+        <span class="tech-chip">Excel</span>
+        <span class="tech-chip">Power BI</span>
+        <span class="tech-chip">Git / GitHub</span>
+        <span class="tech-chip">Google Analytics</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ JOURNEY ═══ -->
+<div class="section-divider"></div>
+<section class="section section-bg2" id="journey">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-tag">Background</p>
+      <h2 class="section-title">My Journey</h2>
+      <div class="section-line"></div>
+    </div>
+  </div>
+
+  <div class="journey-layout">
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <span class="tl-year">Present</span>
+        <div class="tl-title">BS Information Technology</div>
+        <p class="tl-desc">State University of Northern Negros — continuing to grow as a developer and analyst, working on real-world systems that create genuine impact.</p>
+      </div>
+      <div class="tl-item reveal reveal-d1">
+        <span class="tl-year">Present</span>
+        <div class="tl-title">Architecting Systems &amp; Data</div>
+        <p class="tl-desc">Mastering <strong>Laravel &amp; Tailwind CSS</strong> to build scalable web ecosystems. Expanding into <strong>Data Analytics</strong> to bridge the gap between software development and actionable business insights.</p>
+      </div>
+      <div class="tl-item reveal reveal-d2">
+        <span class="tl-year">2025 — 3rd Year</span>
+        <div class="tl-title">The Logic &amp; Automation Phase</div>
+        <p class="tl-desc">Shifted focus toward complex application logic. Developed projects using <strong>Java and JavaScript</strong>, and implemented automated communication systems using <strong>PHPMailer</strong> and <strong>Python</strong>.</p>
+      </div>
+      <div class="tl-item reveal reveal-d3">
+        <span class="tl-year">2024 — 2nd Year</span>
+        <div class="tl-title">Laying the Foundation</div>
+        <p class="tl-desc">Deep dive into <strong>PHP, HTML5, and CSS3</strong>. Secured professional certifications in Responsive Web Design, Google Analytics, and HTML Essentials.</p>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-year">2023 — 1st Year</span>
+        <div class="tl-title">Hello, World! 👋</div>
+        <p class="tl-desc">The first line of code that started it all. Discovered a passion for problem-solving through digital creation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<div class="section-divider"></div>
+<section class="section section-bg3" id="certs">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-tag">Credentials</p>
+      <h2 class="section-title">Certifications</h2>
+      <div class="section-line"></div>
+    </div>
+  </div>
+  
+  <div class="certs-grid">
+    <div class="cert-card reveal" onclick="viewCert('pictures/cert/ResponsiveWebDesign.png')">
+      <div class="cert-icon">🎓</div>
+      <div>
+        <div class="cert-name">Responsive Web Design</div>
+        <div class="cert-issuer">freeCodeCamp · 2024</div>
+        <span class="cert-view-btn">View Certificate ↗</span>
+      </div>
+    </div>
+
+    <div class="cert-card reveal reveal-d1" onclick="viewCert('pictures/cert/google-analytics.jpg')">
+      <div class="cert-icon">📊</div>
+      <div>
+        <div class="cert-name">Google Analytics Certified</div>
+        <div class="cert-issuer">Google · 2024</div>
+        <span class="cert-view-btn">View Certificate ↗</span>
+      </div>
+    </div>
+
+    <div class="cert-card reveal reveal-d2" onclick="viewCert('pictures/cert/html-essential.png')">
+      <div class="cert-icon">💻</div>
+      <div>
+        <div class="cert-name">HTML Essentials</div>
+        <div class="cert-issuer">Cisco Networking Academy · 2024</div>
+        <span class="cert-view-btn">View Certificate ↗</span>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-d2" onclick="viewCert('pictures/cert/web.png')">
+      <div class="cert-icon">💻</div>
+      <div>
+        <div class="cert-name">Building a Web Solution using Gemini and Firebase Studio Workshop</div>
+        <div class="cert-issuer">Google Developer Group - Cebu Technological University · 2025</div>
+        <span class="cert-view-btn">View Certificate ↗</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="certModal" class="cert-modal" onclick="this.style.display='none'">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullCertImage">
+</div>
+</section>
+
+<!-- ═══ RECOMMENDATIONS ═══ -->
+<div class="section-divider"></div>
+<section class="section section-bg2" id="recs">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-tag">Testimonials</p>
+      <h2 class="section-title">Recommendations & Feedbacks</h2>
+      <div class="section-line"></div>
+    </div>
+  </div>
+  <div class="rec-wrapper reveal">
+    <div class="rec-card">
+      <span class="rec-quote-mark">"</span>
+      <div class="rec-body" id="recBody">
+        <p class="rec-text" id="recText"></p>
+        <div class="rec-author">
+          <div class="rec-avatar" id="recAvatar"></div>
+          <div>
+            <div class="rec-name" id="recName"></div>
+            <div class="rec-role" id="recRole"></div>
+          </div>
+          <div class="rec-stars" id="recStars"></div>
+        </div>
+      </div>
+    </div>
+    <div class="rec-nav">
+      <div class="rec-dots" id="recDots"></div>
+      <div class="rec-arrows">
+        <button class="rec-arr" id="recPrev">←</button>
+        <button class="rec-arr" id="recNext">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<div class="section-divider"></div>
+<section class="section section-bg3" id="contact">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-tag">Get In Touch</p>
+      <h2 class="section-title">Let's Work Together</h2>
+      <div class="section-line"></div>
+    </div>
+  </div>
+  <div class="contact-layout">
+    <div class="reveal">
+      <p class="contact-intro">
+        Open to freelance projects, internship opportunities, and collaborative work. Whether you have a project in mind or just want to chat about tech — my inbox is always open.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:shaynatangguan8@gmail.com" class="contact-link">
+          <div><div class="cl-label">Email</div><div class="cl-val">shaynatangguan8@gmail.com</div></div>
+          <span class="cl-arrow">↗</span>
+        </a>
+        <a href="https://github.com/shainajaneee" target="_blank" class="contact-link">
+          <div><div class="cl-label">GitHub</div><div class="cl-val">github.com/shainajaneee</div></div>
+          <span class="cl-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/shaina-jane-tanguan-4b3491361/" target="_blank" class="contact-link">
+          <div><div class="cl-label">LinkedIn</div><div class="cl-val">shaina-jane-tanguan</div></div>
+          <span class="cl-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+    <div class="contact-form-box reveal reveal-d1">
+      <p class="form-title">Send a Quick Message</p>
+      <div class="form-group">
+        <label class="form-label">Your Name</label>
+        <input class="form-input" type="text" id="fName" placeholder="John Doe">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input class="form-input" type="email" id="fEmail" placeholder="john@example.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-input" id="fMsg" rows="4" placeholder="Tell me about your project..."></textarea>
+      </div>
+      <button class="form-submit" id="formSubmit">Send Message →</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span class="footer-copy">© 2026 Shaina Jane Tanguan. </span>
+  <button class="footer-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</button>
+</footer>
+
+<script src="script.js"></script>
+<script>
+const FEATURED = [
+  {
+    name: "USWAG BALINTAWAK — Barangay Document System",
+    label: "Gov-Tech",
+    desc: "A centralized administrative engine that digitizes and tracks the lifecycle of official local certifications — replacing manual filing with secure digital workflow and real-time status updates for residents and staff.",
+    impact: "↑ Optimized request-to-issuance turnaround for official documents",
+    chips: ["Laravel", "MySQL", "Tailwind CSS", "Alpine JS"],
+    url: "https://github.com/shainajaneee/barangay-docs",
+    slides: [
+      { e: "🏛️", bg: "#0b1a0b", img: "pictures/proj/barangay-1.png" },
+      { e: "📄", bg: "#091520", img: "pictures/proj/barangay-2.png" },
+      { e: "🔐", bg: "#1a0b0b", img: "pictures/proj/barangay-3.png" },
+      { e: "📋", bg: "#1a1a0b", img: "pictures/proj/barangay-4.png" },
+      { e: "📊", bg: "#0b0b1a", img: "pictures/proj/barangay-5.png" },
+    ]
+  },
+  {
+  name: "VGDH — Online Appointment System",
+  label: "HealthTech",
+  category: "healthtech",
+  desc: "A digital transformation project for Vincent Gustillo District Hospital designed to eliminate physical queues. It features a triple-role architecture (Patient, Staff, Admin) to manage remote bookings and real-time scheduling.",
+  impact: "↑ Replaced manual 'pila' system with a 24/7 digital booking portal",
+  chips: ["HTML", "PHP", "MySQL", "CSS/Bootstrap 5", "JavaScript"],
+  url: "https://vgdhhealthcare.ct.ws/",
+  slides: [
+    { e: "🏥", bg: "#0f172a", img: "pictures/proj/vgdh-main.jpg" },
+    { e: "📅", bg: "#1e293b", img: "pictures/proj/vgdh-admin.jpg" },
+    { e: "📅", bg: "#1e293b", img: "pictures/proj/vgdh-dash.jpg" },
+    { e: "👥", bg: "#334155", img: "pictures/proj/vgdh-users.jpg" },
+    { e: "📋", bg: "#020617", img: "pictures/proj/vgdh-form.jpg" },
+  ]
+},
+  {
+    name: "Integretech — Healthcare Management System",
+    label: "HealthTech",
+    desc: "Full-stack healthcare management system optimizing patient data handling and clinic workflows. Reduces manual entry errors and improves record accuracy for clinical staff across multiple departments, with appointment scheduling and reporting modules.",
+    impact: "↑ Streamlined patient data operations across multiple departments",
+    chips: ["PHP", "MySQL", "JavaScript", "Bootstrap", "Healthcare"],
+    url: "https://github.com/shainajaneee/Integretech-Nursing-Informatics-Healthcare-Management/",
+    slides: [
+      { e: "🏥", bg: "#091520", img: "pictures/proj/integ-1.jpg" },
+      { e: "💊", bg: "#0b1a10", img: "pictures/proj/integ-2.jpg" },
+      { e: "📅", bg: "#1a0b10", img: "pictures/proj/integ-3.jpg" },
+      { e: "🩺", bg: "#0b091a", img: "pictures/proj/integ-4.jpg" },
+      { e: "📈", bg: "#1a1a0b", img: "pictures/proj/integ-5.jpg" },
+    ]
+  },
+];
+
+/* ── RECOMMENDATIONS DATA — Add manually here ── */
+const RECS = [
+  {
+    text: "I would like to express my sincere gratitude to Shaina Jane Tanguan for her valuable help in our subject, Innovation and Game Changing. She played a key role in developing the Barangay Document Recording and Routing System, a simple system that records, tracks, and organizes barangay documents efficiently. Through her work, the system improved transparency, accountability, and processing of documents. I highly recommend her skills and dedication, as she successfully delivered the project on time and made our innovation more effective and presentable.",
+    name: "Kenjie C. Morales",
+    role: "Student/Client — SUNN",
+    initials: "KM",
+    stars: 5
+  },
+  {
+    text: "Thank you gd ha sa system. God bless u!",
+    name: "Project User",
+    role: "Verified Client",
+    initials: "PU",
+    stars: 5
+  },
+  {
+    text: "Thank you so much. We used the game sa christmas, and eveyone is given fair amount of their pamasko",
+    name: "Project User",
+    role: "Verified Client",
+    initials: "PU",
+    stars: 5
+  },
+  {
+    text: "Thankyou for helping us build the system, your effort and knowledge really help us believe and make us motivated that we can pass this kind of Project in our subject Innovation and Game changing. This will really help not only us but also to the Barangay Balintawak, Escalante City. It will make the their work more easier and more transparent in the people of Barangay Balintawak.",
+    name: "Thed I. Teguihanon",
+    role: "Student/Client - SUNN, BPA",
+    initials: "TT",
+    stars: 5
+  }
+  
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('featuredGrid');
+  
+  // Clear the grid first just in case, then load projects
+  if (grid && typeof buildProjectCard === 'function') {
+    grid.innerHTML = ''; // Safety measure: ensures the grid is empty before adding
+    FEATURED.forEach((proj, i) => {
+      grid.appendChild(buildProjectCard(proj, i));
+    });
+  }
+
+  // Initialize other components
+  if (typeof initRecs === 'function') initRecs(RECS);
+  if (typeof initContactForm === 'function') initContactForm();
+});
+</script>
+</body>
+</html>

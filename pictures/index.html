@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaina Jane Tanguan - Web Developer</title>
+  <!-- Tailwind first -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class', // enable class-based dark mode
+    theme: { extend: {} },
+  }
+</script>
+
+
+   <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+
+
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-pink-600">SJT</h1>
+      <ul class="hidden md:flex space-x-8 font-medium">
+        <li><a href="#home" class="text-gray-700 dark:text-gray-200 hover:text-pink-600">Home</a></li>
+        <li><a href="#about" class="text-gray-700 dark:text-gray-200 hover:text-pink-600">About</a></li>
+        <li><a href="#skills" class="text-gray-700 dark:text-gray-200 hover:text-pink-600">Skills</a></li>
+        <li><a href="#certificates" class="text-gray-700 dark:text-gray-200 hover:text-pink-600">Certificates</a></li>
+        <li><a href="#projects" class="text-gray-700 dark:text-gray-200 hover:text-pink-600">Projects</a></li>
+        <li><a href="#contact" class="text-gray-700 dark:text-gray-200 hover:text-pink-600">Contact</a></li>
+      </ul>
+      <div class="flex items-center space-x-4">
+        <button id="theme-toggle" class="text-xl text-gray-700 dark:text-gray-200">
+          <i id="theme-toggle-icon" class="fas fa-moon"></i>
+        </button>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-20 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+    <div class="md:w-1/2 space-y-6">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">Shaina Jane</span>
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300">Web Developer & Student passionate about creating beautiful, functional websites.</p>
+      <div class="flex space-x-4">
+        <a href="#contact" class="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-6 py-3 rounded-full shadow hover:opacity-90">Get in Touch</a>
+        <a href="#projects" class="border-2 border-pink-500 text-pink-500 dark:text-pink-400 dark:border-pink-400 px-6 py-3 rounded-full hover:bg-pink-50 dark:hover:bg-gray-700">View Work</a>
+      </div>
+    </div>
+    <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+      <div class="relative w-64 h-80 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 p-[3px] shadow-lg">
+        <div class="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800">
+          <img src="pictures/myphoto.jpg" alt="Shaina Jane" class="w-full h-full object-cover rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-pink-500 mb-6">About Me</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto mb-12">
+        I'm Shaina, a passionate web developer and aspiring data analyst with hands-on experience in
+        <span class="font-semibold">HTML, CSS, JavaScript, PHP, and MySQL</span>. 
+        I enjoy building user-friendly, responsive web applications and transforming data into meaningful insights using tools like Python, Pandas, Matplotlib, and Google Colab.
+        With a strong foundation in both frontend/backend development and growing expertise in data analysis, I strive to create solutions that are not only visually appealing but also data-driven, efficient, and impactful.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+  <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+    <div class="text-pink-500 dark:text-pink-400 text-4xl mb-3">🎨</div>
+    <h3 class="text-xl font-bold mb-2 text-pink-500 dark:text-pink-400">Modern UI/UX</h3>
+    <p class="text-gray-700 dark:text-gray-300">Designing sleek, intuitive interfaces that provide seamless user experiences.</p>
+  </div>
+  <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+    <div class="text-pink-500 dark:text-pink-400 text-4xl mb-3">📊</div>
+    <h3 class="text-xl font-bold mb-2 text-pink-500 dark:text-pink-400">Data Analysis</h3>
+    <p class="text-gray-700 dark:text-gray-300">Turning raw data into actionable insights using Python, Pandas, and visualization tools.</p>
+  </div>
+  <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+    <div class="text-pink-500 dark:text-pink-400 text-4xl mb-3">⚡</div>
+    <h3 class="text-xl font-bold mb-2 text-pink-500 dark:text-pink-400">Performance & Scalability</h3>
+    <p class="text-gray-700 dark:text-gray-300">Building fast, efficient, and scalable web applications that grow with your needs.</p>
+  </div>
+</div>
+    </div>
+  </section>
+
+ <!-- Tools Section -->
+<section id="tools" class="py-20 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-pink-500 mb-6">Tools & Technologies</h2>
+    <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-12">Web Development & Data Analysis</h3>
+    <div class="grid md:grid-cols-4 gap-8">
+
+      <!-- Web Development Tools -->
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML5" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">HTML5</h3>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">CSS3 / Tailwind</h3>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">JavaScript</h3>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="pictures/php.png" alt="PHP" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">PHP</h3>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="pictures/mysql.png" alt="MySQL" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">MySQL</h3>
+      </div>
+
+      <!-- Data Analysis & ML Tools -->
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Python</h3>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="pictures/gcolab.png" alt="Google Colab" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Google Colab</h3>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="pictures/pandas.png" alt="Pandas" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Pandas</h3>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="pictures/matplotlib.png" alt="Matplotlib" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Matplotlib / Seaborn</h3>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn" class="h-16 mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Scikit-learn</h3>
+      </div>
+     
+
+    </div>
+  </div>
+</section>
+
+    <!-- Certificates Section -->
+  <section id="certificates" class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400 mb-12">
+        Certificates
+      </h2>
+
+      <div class="space-y-8 text-left md:text-left">
+        <!-- Certificate 1 -->
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Responsive Web Design</h3>
+            <p class="text-gray-700 dark:text-gray-300 mt-1">Issued by freeCodeCamp</p>
+          </div>
+          <a href="https://drive.google.com/file/d/1CG6FKUIkq3BR0aGxYGVzibG15WSEdTbR/view" target="_blank"
+             class="mt-4 md:mt-0 inline-block bg-gradient-to-r from-pink-500 to-orange-400 text-white px-5 py-2 rounded-full font-medium hover:opacity-90">
+            View Certificate
+          </a>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Google Analytics</h3>
+            <p class="text-gray-700 dark:text-gray-300 mt-1">Issued by Google</p>
+          </div>
+          <a href="https://skillshop.credential.net/8d142862-7106-4d3d-92d4-d735b0417fde#acc.6jmK78S4" target="_blank"
+             class="mt-4 md:mt-0 inline-block bg-gradient-to-r from-pink-500 to-orange-400 text-white px-5 py-2 rounded-full font-medium hover:opacity-90">
+            View Certificate
+          </a>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">HTML Fundamentals</h3>
+            <p class="text-gray-700 dark:text-gray-300 mt-1">Issued by CodeCred</p>
+          </div>
+          <a href="https://www.codecred.dev/verify/626346bd-25dc-4aef-b7a7-eb77aefe813f" target="_blank"
+             class="mt-4 md:mt-0 inline-block bg-gradient-to-r from-pink-500 to-orange-400 text-white px-5 py-2 rounded-full font-medium hover:opacity-90">
+            View Certificate
+          </a>
+        </div>
+
+        <!-- Certificate 4 -->
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">HTML Essentials</h3>
+            <p class="text-gray-700 dark:text-gray-300 mt-1">Issued by Cisco Networking Academy</p>
+          </div>
+          <a href="https://drive.google.com/drive/folders/1rOYu_mwDWEiqLNMenNOBh8V-1314IDqM" target="_blank"
+             class="mt-4 md:mt-0 inline-block bg-gradient-to-r from-pink-500 to-orange-400 text-white px-5 py-2 rounded-full font-medium hover:opacity-90">
+            View Certificate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Charts Section -->
+<section id="charts" class="py-20 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-4xl font-bold text-pink-500 text-center mb-12">
+      My Skills & Projects Breakdown
+    </h2>
+
+    <!-- MAIN BAR CHART -->
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md mb-12">
+      <h3 class="text-2xl font-bold text-pink-500 mb-4">
+        Most Used Tools & Programming Languages
+      </h3>
+      <div class="w-full h-80">
+        <canvas id="languageChart"></canvas>
+      </div>
+    </div>
+
+    <!-- SIDE-BY-SIDE CHARTS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Skills Bar Chart -->
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md">
+        <h3 class="text-2xl font-bold text-pink-500 mb-4">Skills Proficiency</h3>
+        <div class="w-full h-80">
+          <canvas id="skillsBarChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Pie Chart: Project Distribution -->
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md">
+        <h3 class="text-2xl font-bold text-pink-500 mb-4">Project Distribution</h3>
+        <div class="w-full h-80 flex justify-center items-center">
+          <canvas id="projectPieChart" class="max-w-[300px]"></canvas>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Data Interpretation -->
+<div class="max-w-3xl mx-auto my-8 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition">
+  <h3 class="text-2xl font-bold text-pink-500 mb-4">Data Interpretation</h3>
+  <p class="text-gray-700 dark:text-gray-300 mb-2">
+    Based on the charts above, here are some key insights from my skills and projects:
+  </p>
+  <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+    <li>Web development tools like JavaScript, HTML/CSS, and PHP remain central to most of my projects.</li>
+    <li>Backend and database management is primarily handled using SQL/MySQL, supporting robust application functionality.</li>
+    <li>Python and its data analysis libraries (Pandas, Matplotlib, Scikit-learn) are leveraged for data-driven projects and analytics tasks.</li>
+    <li>Google Colab is utilized for cloud-based development, experimentation, and collaborative data analysis.</li>
+    <li>Frameworks like Bootstrap and AdminLTE enhance UI/UX and ensure responsive, modern designs.</li>
+    <li>The overall chart demonstrates a balanced skill set across **web development**, **backend programming**, and **data analysis**, highlighting my versatility in building functional and insightful applications.</li>
+  </ul>
+</div>
+
+
+</div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-pink-500 mb-12">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- Project 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+          <img src="pictures/project1.png" alt="Integretech" class="w-full h-48 object-cover">
+          <div class="p-6 text-left">
+            <h3 class="text-xl font-bold text-pink-500 dark:text-pink-400 mb-2">Integretech</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              A comprehensive web-based healthcare management system built 
+              with HTML, CSS, PHP, JavaScript, and MySQL.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">PHP</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">JavaScript</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">MySQL</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+          <img src="pictures/game2.png" alt="Number Guessing Game" class="w-full h-48 object-cover">
+          <div class="p-6 text-left">
+            <h3 class="text-xl font-bold text-pink-500 dark:text-pink-400 mb-2">Number Guessing Game</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              An interactive game where users try to guess a number between 1-100. 
+              Built with HTML and JavaScript, providing an engaging user experience.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">HTML</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">CSS</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+          <img src="pictures/project3.png" alt="Peer Learning Hub" class="w-full h-48 object-cover">
+          <div class="p-6 text-left">
+            <h3 class="text-xl font-bold text-pink-500 dark:text-pink-400 mb-2">Peer Learning Hub</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              A collaborative platform that connects students for knowledge-sharing 
+              and project collaboration. Built with PHP and MySQL.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">PHP/PHPMailer</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">MySQL</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+         <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+          <img src="pictures/pms.png" alt="Product Management System" class="w-full h-48 object-cover">
+          <div class="p-6 text-left">
+            <h3 class="text-xl font-bold text-pink-500 dark:text-pink-400 mb-2">Peer Learning Hub</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+             A PHP OOP-based Product Management System built with HTML, CSS, JavaScript, MySQL, and AdminLTE — features Category, Supplier, and Product modules with full CRUD operations and relational database handling.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">PHP</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">MySQL</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">JavaScript</span>
+              <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-sm">AdminLTE</span>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!-- DATA ANALYSIS SECTION -->
+<section id="data-analysis" class="py-20 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-6">
+    
+    <h2 class="text-4xl font-bold text-center text-pink-500 mb-12">
+      Data Analysis Projects
+    </h2>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+        <img src="pictures/internetspeed.png" alt="Internet Speed Dashboard"
+          class="rounded-xl mb-4 w-full h-40 object-cover">
+
+        <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
+          Internet Speed Dashboard
+        </h3>
+
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+  A Python-based Internet Speed Dashboard for monitoring and analyzing internet performance over time. Built with Pandas and Matplotlib, the dashboard collects download, upload, and ping data, visualizes trends in charts, and provides insights to help users understand their network performance.
+</p>
+
+
+        <div class="flex items-center justify-between mt-4">
+          <a href="https://github.com/shainajaneee/InternetSpeedDashboard"
+            class="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 text-sm">
+            View Code
+          </a>
+        
+        </div>
+      </div>
+
+    </div><!-- end grid -->
+
+  </div>
+</section>
+
+  
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-pink-500 text-center mb-12">Get in Touch</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-gray-900 dark:text-gray-100">Contact Information</h3>
+          <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+            <li class="flex items-center gap-3"><i class="fas fa-envelope text-pink-500"></i> <span>shaynatangguan8@gmail.com</span></li>
+            <li class="flex items-center gap-3"><i class="fas fa-phone text-pink-500"></i> <span>+639534178526</span></li>
+            <li class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-pink-500"></i> <span>Escalante City</span></li>
+          </ul>
+          <div class="flex gap-6 mt-6">
+            <a href="https://github.com/shainajaneee" class="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white text-3xl"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shaina-jane-tanguan-4b3491361/" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 text-3xl"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/shainajanebtanguan" class="text-blue-500 dark:text-blue-300 hover:text-blue-700 text-3xl"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        <div>
+          <form action="#" method="POST" class="space-y-5">
+            <div>
+              <label class="block mb-2 text-gray-600 dark:text-gray-300">Name</label>
+              <input type="text" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 border-gray-300 dark:border-gray-600" placeholder="Your Name" required>
+            </div>
+            <div>
+              <label class="block mb-2 text-gray-600 dark:text-gray-300">Email</label>
+              <input type="email" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 border-gray-300 dark:border-gray-600" placeholder="Your Email" required>
+            </div>
+            <div>
+              <label class="block mb-2 text-gray-600 dark:text-gray-300">Message</label>
+              <textarea rows="4" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 border-gray-300 dark:border-gray-600" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 rounded-full text-white font-semibold bg-gradient-to-r from-pink-600 to-orange-400 hover:opacity-90">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 dark:text-gray-400 text-sm bg-gray-50 dark:bg-gray-800">
+    <p>&copy; 2025 Shaina Jane Tanguan. All Rights Reserved.</p>
+  </footer>
+
+ 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>
