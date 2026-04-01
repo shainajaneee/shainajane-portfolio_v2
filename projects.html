@@ -14,7 +14,6 @@
 <div id="prog"></div>
 <div id="toast"></div>
 
-<!-- ═══ NAV ═══ -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">SJ<span>.</span>Dev</a>
   <div class="nav-right">
@@ -30,7 +29,6 @@
   </div>
 </nav>
 
-<!-- ═══ PAGE HERO ═══ -->
 <div class="page-hero">
   <div class="page-hero-grid"></div>
   <div class="page-hero-blob"></div>
@@ -57,9 +55,7 @@
   </div>
 </div>
 
-<!-- ═══ ALL PROJECTS ═══ -->
 <section class="section section-bg2">
-  <!-- Filter bar -->
   <div class="filter-bar reveal">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="govtech">Gov-Tech</button>
@@ -74,7 +70,6 @@
   <div class="all-projects-grid" id="allProjectsGrid"></div>
 </section>
 
-<!-- ═══ CTA SECTION ═══ -->
 <div class="section-divider"></div>
 <section class="section section-bg3 reveal" style="text-align:center;">
   <p class="section-tag" style="justify-content:center;display:block">Collaborate</p>
@@ -95,9 +90,6 @@
 
 <script src="script.js"></script>
 <script>
-/* ══════════════════════════════════════
-   ALL PROJECTS DATA
-══════════════════════════════════════ */
 const ALL_PROJECTS = [
   {
   name: "VGDH — Online Appointment System",
@@ -197,7 +189,6 @@ const ALL_PROJECTS = [
   
 ];
 
-/* ── BUILD ALL PROJECT CARDS ── */
 const allGrid = document.getElementById('allProjectsGrid');
 ALL_PROJECTS.forEach((proj, i) => {
   const card = buildProjectCard(proj, i, 3000 + i * 300);
@@ -205,7 +196,6 @@ ALL_PROJECTS.forEach((proj, i) => {
   allGrid.appendChild(card);
 });
 
-/* ── INIT FILTER ── */
 initFilter();
 </script>
 </body>

@@ -1,8 +1,4 @@
-/* ═══════════════════════════════════════════════
-   SHAINA JANE TANGUAN — Portfolio JS
-═══════════════════════════════════════════════ */
 
-/* ── THEME ── */
 const themeBtn = document.getElementById('themeBtn');
 const themeIcon = document.getElementById('themeIcon');
 const html = document.documentElement;
@@ -18,13 +14,11 @@ function toggleTheme() {
   applyTheme(current === 'dark' ? 'light' : 'dark');
 }
 
-// Init theme
 (function() {
   const saved = localStorage.getItem('theme') || 'dark';
   applyTheme(saved);
 })();
 
-/* ── CURSOR ── */
 const cur = document.getElementById('cur');
 const ring = document.getElementById('ring');
 let mx = 0, my = 0, rx = 0, ry = 0;
@@ -52,25 +46,21 @@ if (cur && ring) {
   });
 }
 
-/* ── SCROLL PROGRESS ── */
 const prog = document.getElementById('prog');
 window.addEventListener('scroll', () => {
   if (prog) {
     const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
     prog.style.width = pct + '%';
   }
-  // Nav shrink
   const nav = document.querySelector('.nav');
   if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-/* ── REVEAL ON SCROLL ── */
 window.revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => window.revealObs.observe(el));
-/* ── COUNTER ANIMATION ── */
 function animateCounter(el) {
   const target = parseInt(el.dataset.count);
   const suffix = el.dataset.suffix || '+';
@@ -85,7 +75,6 @@ setTimeout(() => {
   document.querySelectorAll('[data-count]').forEach(animateCounter);
 }, 900);
 
-/* ── GALLERY CONTROLLER ── */
 const galleryStates = {};
 
 function buildGallery(card, pi, slides, autoDelay) {
@@ -123,7 +112,6 @@ function buildGallery(card, pi, slides, autoDelay) {
   }
 }
 
-/* ── PROJECT CARD BUILDER ── */
 function buildProjectCard(proj, idx, autoDelay) {
   const card = document.createElement('div');
   card.className = 'project-card reveal';
@@ -174,13 +162,11 @@ function buildProjectCard(proj, idx, autoDelay) {
 
   buildGallery(card, `${Date.now()}-${idx}`, proj.slides, autoDelay || (3000 + idx * 350));
   
-  // Add this line so the card actually fades in!
   if (window.revealObs) window.revealObs.observe(card); 
 
   return card;
 }
 
-/* ── RECOMMENDATIONS ── */
 let recIndex = 0;
 
 function initRecs(recs) {
@@ -227,11 +213,9 @@ function initRecs(recs) {
   if (nextBtn) nextBtn.addEventListener('click', () => goRec(recIndex + 1));
 
   showRec(0);
-  // Auto-cycle
   setInterval(() => { if (!document.hidden) goRec(recIndex + 1); }, 7000);
 }
 
-/* ── TOAST ── */
 function showToast(msg) {
   const t = document.getElementById('toast');
   if (!t) return;
@@ -240,7 +224,6 @@ function showToast(msg) {
   setTimeout(() => t.classList.remove('show'), 3000);
 }
 
-/* ── CONTACT FORM ── */
 function initContactForm() {
   const btn = document.getElementById('formSubmit');
   if (!btn) return;
@@ -254,7 +237,6 @@ function initContactForm() {
   });
 }
 
-/* ── FILTER (projects page) ── */
 function initFilter() {
   const btns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.project-card[data-category]');
@@ -279,7 +261,6 @@ function viewCert(imagePath) {
     modalImg.src = imagePath;
 }
 
-/* ── EXPOSE GLOBALS ── */
 window.toggleTheme = toggleTheme;
 window.showToast   = showToast;
 window.buildProjectCard = buildProjectCard;

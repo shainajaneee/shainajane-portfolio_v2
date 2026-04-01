@@ -1,18 +1,12 @@
-/* ═══════════════════════════════════════════════
-   SHAINA JANE TANGUAN — Portfolio CSS
-   Fonts: Syne (display) + DM Sans (body)
-═══════════════════════════════════════════════ */
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
 
-/* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 ul, ol { list-style: none; }
 
-/* ── TOKENS — DARK (default) ── */
 :root {
   --bg:        #080810;
   --bg2:       #0f0f18;
@@ -36,7 +30,6 @@ ul, ol { list-style: none; }
   --nav-bg:    rgba(8,8,16,.8);
 }
 
-/* ── LIGHT MODE ── */
 [data-theme="light"] {
   --bg:        #f8f8fc;
   --bg2:       #f0f0f8;
@@ -56,7 +49,6 @@ ul, ol { list-style: none; }
   --shadow:    0 20px 60px rgba(0,0,0,.1);
 }
 
-/* ── BASE ── */
 html { scroll-behavior: smooth; }
 
 body {
@@ -70,12 +62,10 @@ body {
   transition: background .3s, color .3s;
 }
 
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-/* ── NOISE OVERLAY ── */
 body::before {
   content: '';
   position: fixed;
@@ -86,7 +76,6 @@ body::before {
   opacity: .35;
 }
 
-/* ── CURSOR ── */
 #cur {
   position: fixed;
   width: 10px; height: 10px;
@@ -111,7 +100,6 @@ body::before {
 }
 body:hover #cur { opacity: 1; }
 
-/* ── PROGRESS BAR ── */
 #prog {
   position: fixed;
   top: 0; left: 0;
@@ -123,7 +111,6 @@ body:hover #cur { opacity: 1; }
   transition: width .1s linear;
 }
 
-/* ── TOAST ── */
 #toast {
   position: fixed;
   bottom: 32px;
@@ -142,9 +129,6 @@ body:hover #cur { opacity: 1; }
 }
 #toast.show { transform: translateX(-50%) translateY(0); }
 
-/* ════════════════════════════════════════
-   NAV
-════════════════════════════════════════ */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -215,7 +199,6 @@ body:hover #cur { opacity: 1; }
 }
 .theme-btn:hover { border-color: var(--accent); background: var(--accent-dim); transform: rotate(15deg); }
 
-/* ── HAMBURGER BUTTON ── */
 .hamburger {
   display: none;
   width: 36px; height: 36px;
@@ -240,9 +223,6 @@ body:hover #cur { opacity: 1; }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); background: var(--accent); }
 
-/* ════════════════════════════════════════
-   HERO
-════════════════════════════════════════ */
 .hero {
   min-height: 100vh;
   display: grid;
@@ -284,7 +264,6 @@ body:hover #cur { opacity: 1; }
 [data-theme="light"] .hero-blob-1 { background: radial-gradient(circle,rgba(124,184,0,.08) 0%,transparent 70%); }
 [data-theme="light"] .hero-blob-2 { background: radial-gradient(circle,rgba(96,68,224,.06) 0%,transparent 70%); }
 
-/* Hero left */
 .hero-left { position: relative; z-index: 2; }
 .hero-badge {
   display: inline-flex;
@@ -360,7 +339,6 @@ body:hover #cur { opacity: 1; }
   animation: fadeUp .7s .68s forwards;
 }
 
-/* Hero right */
 .hero-right {
   position: relative;
   z-index: 2;
@@ -442,7 +420,6 @@ body:hover #cur { opacity: 1; }
   letter-spacing: .07em;
 }
 
-/* Scroll hint */
 .scroll-hint {
   position: absolute;
   bottom: 36px; left: 50%;
@@ -464,9 +441,6 @@ body:hover #cur { opacity: 1; }
   animation: scrollBounce 1.5s ease-in-out infinite;
 }
 
-/* ════════════════════════════════════════
-   BUTTONS
-════════════════════════════════════════ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -492,9 +466,6 @@ body:hover #cur { opacity: 1; }
 .btn-outline:hover { border-color: var(--accent); background: var(--accent-dim); color: var(--accent); }
 .btn-sm { font-size: .8rem; padding: 9px 20px; }
 
-/* ════════════════════════════════════════
-   SECTION COMMONS
-════════════════════════════════════════ */
 .section { padding: 100px 64px; position: relative; }
 .section-bg2 { background: var(--bg2); }
 .section-bg3 { background: var(--bg); }
@@ -531,9 +502,6 @@ body:hover #cur { opacity: 1; }
   flex-wrap: wrap;
 }
 
-/* ════════════════════════════════════════
-   REVEAL ANIMATIONS
-════════════════════════════════════════ */
 .reveal {
   opacity: 0;
   transform: translateY(36px);
@@ -545,9 +513,6 @@ body:hover #cur { opacity: 1; }
 .reveal-d3 { transition-delay: .3s; }
 .reveal-d4 { transition-delay: .4s; }
 
-/* ════════════════════════════════════════
-   PROJECTS — FEATURED (index)
-════════════════════════════════════════ */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -568,7 +533,6 @@ body:hover #cur { opacity: 1; }
 }
 [data-theme="light"] .project-card:hover { border-color: rgba(124,184,0,.4); }
 
-/* Gallery */
 .card-gallery {
   position: relative;
   height: 220px;
@@ -671,7 +635,6 @@ body:hover #cur { opacity: 1; }
   box-shadow: 0 0 6px var(--accent);
 }
 
-/* Card content */
 .card-content { padding: 20px; }
 .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
 .card-name {
@@ -718,12 +681,8 @@ body:hover #cur { opacity: 1; }
 }
 .project-card:hover .card-chip { border-color: rgba(200,255,0,.2); color: var(--text); }
 
-/* view all */
 .view-all-wrap { text-align: center; margin-top: 48px; }
 
-/* ════════════════════════════════════════
-   TECH STACK — MARQUEE
-════════════════════════════════════════ */
 .stack-section { overflow: hidden; }
 .stack-row { margin-bottom: 24px; }
 .stack-row-label {
@@ -764,9 +723,6 @@ body:hover #cur { opacity: 1; }
   color: var(--accent);
 }
 
-/* ════════════════════════════════════════
-   JOURNEY — aside layout
-════════════════════════════════════════ */
 .journey-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -783,7 +739,6 @@ body:hover #cur { opacity: 1; }
 }
 .journey-aside-sub { font-size: .9rem; color: var(--text2); line-height: 1.7; margin-bottom: 24px; }
 
-/* Journey photos grid */
 .journey-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
 .journey-photo {
   border-radius: var(--radius);
@@ -805,7 +760,6 @@ body:hover #cur { opacity: 1; }
   background: linear-gradient(135deg, var(--surface), var(--surface2));
 }
 
-/* Timeline */
 .timeline { position: relative; }
 .timeline::before {
   content: '';
@@ -861,9 +815,6 @@ body:hover #cur { opacity: 1; }
 }
 .tl-desc strong { color: var(--text); font-weight: 500; }
 
-/* ════════════════════════════════════════
-   CERTIFICATIONS
-════════════════════════════════════════ */
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -902,9 +853,6 @@ body:hover #cur { opacity: 1; }
   letter-spacing: 1px;
 }
 
-/* ════════════════════════════════════════
-   RECOMMENDATIONS
-════════════════════════════════════════ */
 .rec-wrapper { max-width: 760px; margin: 0 auto; }
 .rec-card {
   background: var(--surface);
@@ -989,9 +937,6 @@ body:hover #cur { opacity: 1; }
 }
 .rec-arr:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
 
-/* ════════════════════════════════════════
-   CONTACT
-════════════════════════════════════════ */
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1020,7 +965,6 @@ body:hover #cur { opacity: 1; }
 .cl-arrow { color: var(--accent); font-size: 1.1rem; transition: transform .2s; flex-shrink: 0; margin-left: 10px; }
 .contact-link:hover .cl-arrow { transform: translate(2px,-2px); }
 
-/* Contact form */
 .contact-form-box {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1058,9 +1002,6 @@ body:hover #cur { opacity: 1; }
 }
 .form-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 24px var(--accent-glow); }
 
-/* ════════════════════════════════════════
-   FOOTER
-════════════════════════════════════════ */
 .footer {
   padding: 28px 64px;
   border-top: 1px solid var(--border);
@@ -1080,9 +1021,6 @@ body:hover #cur { opacity: 1; }
 }
 .footer-top:hover { border-color: var(--accent); color: var(--accent); }
 
-/* ════════════════════════════════════════
-   PROJECTS PAGE
-════════════════════════════════════════ */
 .page-hero {
   padding: 160px 64px 80px;
   background: var(--bg);
@@ -1124,7 +1062,6 @@ body:hover #cur { opacity: 1; }
   gap: 22px;
 }
 
-/* Filter bar */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -1144,9 +1081,6 @@ body:hover #cur { opacity: 1; }
 .filter-btn:hover,
 .filter-btn.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
 
-/* ════════════════════════════════════════
-   TYPEWRITER
-════════════════════════════════════════ */
 .typewriter-text {
   display: inline-block;
   overflow: hidden;
@@ -1168,9 +1102,6 @@ body:hover #cur { opacity: 1; }
   50% { border-color: var(--accent); }
 }
 
-/* ════════════════════════════════════════
-   MODAL
-════════════════════════════════════════ */
 .cert-modal {
   display: none;
   position: fixed;
@@ -1203,9 +1134,6 @@ body:hover #cur { opacity: 1; }
   cursor: pointer;
 }
 
-/* ════════════════════════════════════════
-   KEYFRAMES
-════════════════════════════════════════ */
 @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
 @keyframes fadeIn { from{opacity:0;transform:scale(.97)} to{opacity:1;transform:scale(1)} }
 @keyframes blobFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
@@ -1215,9 +1143,6 @@ body:hover #cur { opacity: 1; }
 @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
 
-/* ════════════════════════════════════════
-   RESPONSIVE — 1024px (Tablets landscape)
-════════════════════════════════════════ */
 @media (max-width: 1024px) {
   /* Nav */
   .nav { padding: 16px 32px; }
@@ -1243,23 +1168,19 @@ body:hover #cur { opacity: 1; }
   .hero-actions { justify-content: center; }
   .hero-right { order: -1; }
 
-  /* Journey — 2-col → 1-col */
   .journey-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
   .journey-aside { position: static; }
 
-  /* Contact — 2-col → 1-col */
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 36px;
   }
 
-  /* Page hero */
   .page-hero { padding: 130px 32px 60px; }
 
-  /* Footer */
   .footer {
     padding: 24px 32px;
     flex-direction: column;
@@ -1269,20 +1190,14 @@ body:hover #cur { opacity: 1; }
 }
 
 
-/* ════════════════════════════════════════
-   RESPONSIVE — 768px (Tablets portrait)
-════════════════════════════════════════ */
 @media (max-width: 768px) {
-  /* ── NAV: show hamburger, hide desktop links ── */
   .hamburger { display: flex; }
   .nav-right .nav-link,
   .nav-right .nav-cta { display: none; }
   .nav { padding: 14px 20px; }
   .nav.scrolled { padding: 10px 20px; }
 
-  /* Mobile nav drawer */
   .nav-right {
-    /* Reset flex row */
     gap: 10px;
   }
   .nav-right.open {
@@ -1311,15 +1226,12 @@ body:hover #cur { opacity: 1; }
     align-self: flex-start;
     margin-top: 14px;
   }
-  /* Always show theme btn */
   .theme-btn { display: flex; }
 
-  /* ── Sections ── */
   .section { padding: 64px 20px; }
   .section-divider { margin: 0 20px; }
   .section-header { margin-bottom: 36px; }
 
-  /* ── Hero ── */
   .hero { padding: 100px 20px 60px; gap: 32px; }
   .hero-name { font-size: clamp(2rem, 8vw, 2.8rem); }
   .hero-role { font-size: 1rem; }
@@ -1329,50 +1241,34 @@ body:hover #cur { opacity: 1; }
   .stat-lbl { font-size: .6rem; }
   .photo-frame { width: 200px; height: 240px; }
 
-  /* ── Projects grid ── */
   .projects-grid,
   .all-projects-grid { grid-template-columns: 1fr; }
 
-  /* ── Certs grid ── */
   .certs-grid { grid-template-columns: 1fr; }
 
-  /* ── Journey photos ── */
-  .journey-photos { grid-template-columns: 1fr 1fr; }
-  .journey-photos .journey-photo:first-child { grid-column: 1/-1; }
-
-  /* ── Recommendations ── */
   .rec-card { padding: 30px 24px; min-height: unset; }
   .rec-text { font-size: 1rem; }
   .rec-stars { display: none; } /* avoids layout break on very small */
 
-  /* ── Contact ── */
   .contact-form-box { padding: 24px 20px; }
 
-  /* ── Page hero ── */
   .page-hero { padding: 110px 20px 50px; }
 
-  /* ── Footer ── */
   .footer { padding: 20px; gap: 12px; }
 
-  /* ── Tech marquee ── */
   .tech-chip { padding: 8px 14px; font-size: .8rem; }
 
-  /* ── Filter bar ── */
   .filter-bar { gap: 6px; }
   .filter-btn { padding: 7px 14px; font-size: .74rem; }
 }
 
 
-/* ════════════════════════════════════════
-   RESPONSIVE — 480px (Mobile phones)
-════════════════════════════════════════ */
 @media (max-width: 480px) {
   /* ── Nav ── */
   .nav { padding: 12px 16px; }
   .nav.scrolled { padding: 10px 16px; }
   .nav-logo { font-size: 1rem; }
 
-  /* ── Hero ── */
   .hero { padding: 90px 16px 56px; }
   .hero-name { font-size: clamp(1.75rem, 9vw, 2.2rem); }
   .hero-role { font-size: .9rem; }
@@ -1380,66 +1276,52 @@ body:hover #cur { opacity: 1; }
   .photo-frame { width: 170px; height: 200px; }
   .photo-location { font-size: .6rem; padding: 5px 10px; }
 
-  /* Stats — stack to single column on very small */
   .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
   .stat-num { font-size: 1.15rem; }
   .stat-lbl { font-size: .55rem; letter-spacing: .04em; }
   .stat-card { padding: 10px 6px; }
 
-  /* ── Buttons ── */
   .btn { font-size: .82rem; padding: 11px 20px; }
   .hero-actions { gap: 8px; }
 
-  /* ── Sections ── */
   .section { padding: 52px 16px; }
   .section-divider { margin: 0 16px; }
 
-  /* ── Recommendations ── */
   .rec-card { padding: 24px 18px; }
   .rec-text { font-size: .9rem; line-height: 1.6; }
   .rec-author { flex-wrap: wrap; gap: 10px; }
   .rec-name { font-size: .85rem; }
 
-  /* ── Contact ── */
   .cl-val { font-size: .8rem; word-break: break-all; }
   .contact-form-box { padding: 20px 16px; }
 
-  /* ── Journey photos ── */
   .journey-photos { grid-template-columns: 1fr; }
   .journey-photos .journey-photo:first-child { grid-column: unset; }
 
-  /* ── Certs ── */
   .cert-card { padding: 16px; }
   .cert-icon { width: 38px; height: 38px; font-size: 1.1rem; }
 
-  /* ── Page hero ── */
   .page-hero { padding: 100px 16px 44px; }
 
-  /* ── Footer ── */
   .footer { padding: 18px 16px; }
   .footer-copy { font-size: .76rem; }
 
-  /* ── Typewriter — allow wrapping on tiny screens ── */
   .typewriter-text { white-space: normal; border-right: none; animation: none; width: auto; }
 
-  /* ── Modal ── */
   .modal-content { width: 95%; }
   .close-modal { top: 12px; right: 18px; font-size: 30px; }
 
-  /* ── Gallery btn always visible on touch ── */
   .gallery-btn { opacity: 1; }
 }
-/* Targeted fix for the photo section */
 .photo-frame, 
 .photo-inner {
-  backdrop-filter: none !important;          /* Removes the blur effect */
-  -webkit-backdrop-filter: none !important;   /* For Safari support */
-  background: rgba(15, 23, 42, 0.5) !important; /* Optional: Change to a solid color or lower opacity */
-  border: 1px solid var(--border);            /* Keeps a clean border without the glow */
-  box-shadow: none !important;                /* Removes any "floating" glass shadow */
+  backdrop-filter: none !important;          
+  -webkit-backdrop-filter: none !important;   
+  background: rgba(15, 23, 42, 0.5) !important; 
+  border: 1px solid var(--border);            
+  box-shadow: none !important;                
 }
 
-/* Ensure the image itself isn't being filtered */
 .photo-inner img {
   filter: none !important;
 }
