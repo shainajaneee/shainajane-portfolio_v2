@@ -1429,3 +1429,17 @@ body:hover #cur { opacity: 1; }
   /* ── Gallery btn always visible on touch ── */
   .gallery-btn { opacity: 1; }
 }
+/* Targeted fix for the photo section */
+.photo-frame, 
+.photo-inner {
+  backdrop-filter: none !important;          /* Removes the blur effect */
+  -webkit-backdrop-filter: none !important;   /* For Safari support */
+  background: rgba(15, 23, 42, 0.5) !important; /* Optional: Change to a solid color or lower opacity */
+  border: 1px solid var(--border);            /* Keeps a clean border without the glow */
+  box-shadow: none !important;                /* Removes any "floating" glass shadow */
+}
+
+/* Ensure the image itself isn't being filtered */
+.photo-inner img {
+  filter: none !important;
+}
